@@ -1,0 +1,95 @@
+.partners {
+
+  &--services {
+    padding: 80px 0 0px;
+  }
+
+  &__container {
+
+    @include viewport-xxl {
+    padding: 0 100px;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: $main-color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 120px);
+    grid-auto-rows: 0;
+
+    @include viewport-md {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include viewport-xxl {
+      border-radius: $radius-md;
+      margin-bottom: 60px;
+      overflow: hidden;
+    }
+  }
+
+  &__item {
+    @include flex-center;
+    overflow: hidden;
+
+    &:nth-child(1) {
+      background: #1C4280;
+    }
+    &:nth-child(2) {
+      background: #143646;
+    }
+    &:nth-child(3) {
+      background: #F48B30;      
+    }
+    &:nth-child(4) {
+      background: #9E4DC3;      
+    }
+    &:nth-child(5) {
+      background: #FD9339;      
+    }
+    &:nth-child(6) {
+      background: #E2E2E4;      
+    }
+    &:nth-child(7) {
+      background: #C71C36;      
+    }
+    &:nth-child(8) {
+      background: #DCF3F9;      
+    }
+    &:nth-child(9) {
+      background: #EAEAEA;      
+    }
+    &:nth-child(10) {
+      background: #282240;      
+    }
+    &:nth-child(11) {
+      background: #1D4568;      
+    }
+    &:nth-child(12) {
+      background: #000000;      
+    }
+
+    @include viewport-md {
+      height: 120px;
+      flex: 1 1 33%;
+    }
+
+    @include viewport-lg {
+      flex: 1 1 25%;
+    }
+
+    img {
+    }
+  }
+}

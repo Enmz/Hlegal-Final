@@ -1,0 +1,101 @@
+.services {
+  padding: 0 0 60px;
+
+  @include viewport-md {
+    padding: 30px 0 60px;
+  }
+
+  &__container {
+
+  }
+
+  &__link {
+    @include base-link;
+    font-size: 14px;
+    letter-spacing: 1px;
+    position: relative;
+    text-transform: uppercase;
+    padding: 0 9px 0 0;
+    margin-bottom: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      right: 0;
+      width: 7.5px;
+      height: 7.5px;
+      transform: rotate(-45deg);
+      border-bottom: 2px solid $regular-color;
+      border-right: 2px solid $regular-color;
+      transition: .2s;
+    }
+  }
+
+  &__title {
+    @include subtitle;
+    @include main-gradient-text;
+    margin-bottom: 30px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-row-gap: 30px; 
+
+    @include viewport-md {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 60px;
+      grid-row-gap: 60px;
+    } 
+
+    @include viewport-lg {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 60px;
+      grid-row-gap: 60px;
+    } 
+    
+  }
+
+  &__cards-item {
+  }
+
+  &__cards-img {
+    width: fit-content;
+    padding: 14px;
+    line-height: 10px;
+    background: #fff;
+    border-radius: 24px;
+    margin-bottom: 30px;
+  
+    svg {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &__cards-title {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 700;
+    color: $regular-color;
+  }
+
+  &__cards-link {
+    display: block;
+    @include base-link;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  &__cards-desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $basic-white;
+  }
+
+}

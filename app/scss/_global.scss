@@ -1,0 +1,81 @@
+body {
+	font-family: 'Montserrat';
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.wrapper {
+	background: $gradient-supersoft;
+	border-radius: 0 0 $radius-sm $radius-sm;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 20px;
+		right: 20px;
+		height: 10px;
+		background-color: #CACADB;
+		border-radius: 0 0 $radius-sm $radius-sm;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -20px;
+		left: 40px;
+		right: 40px;
+		height: 10px;
+		background-color: #E7E7F2;
+		border-radius: 0 0 $radius-sm $radius-sm;
+	}
+}
+
+.container {
+	// від 0 до бескінечності
+	padding: 0 30px;
+
+	@include viewport-md {
+		max-width: 708px;
+		margin: 0 auto;
+	}
+	@include viewport-lg {
+		max-width: 964px;
+	}
+	@include viewport-xl {
+		max-width: 1380px;
+	}
+	@include viewport-xxl {
+		max-width: 1660px;
+	}
+}
+
+.container-maximize {
+	@include viewport-xxl {
+		max-width: 1920px;
+		margin: 0 auto;
+	}
+}
+
+.dotted {
+	display: none;
+	@include viewport-md {
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		border-radius: $radius-rounded;
+		background: $separator-color;
+
+		&--gray {
+			background: $text-color;
+		}
+	}
+}
+
+.hidden {
+	position: absolute;
+	top: -100%;
+	width: 0;
+	height: 0;
+}

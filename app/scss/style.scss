@@ -1,0 +1,15 @@
+@import 'fonts';
+@import 'reset';
+@import 'vars';
+@import 'global';
+@import 'header';
+@import 'tabs';
+@import 'services';
+// Slider import <
+@import '../../node_modules/swiper/swiper';
+@import '../../node_modules/swiper/modules/pagination';
+// Slider import />
+@import 'team';
+@import 'partners';
+@import 'publications';
+@import 'footer';

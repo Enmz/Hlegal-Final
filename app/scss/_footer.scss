@@ -1,0 +1,135 @@
+.footer {
+  background: $bg-color;
+
+  &__container { 
+  }
+
+  &__inner {
+    padding: 30px 0;
+    border-top: 2px solid $separator-color;
+
+    &--noborder {
+      border-top: none;
+    }
+  }
+
+  &__inner-wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    @include viewport-md {
+      width: fit-content;
+		}
+
+    @include viewport-lg {
+      width: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 21px;
+      margin: 0;
+		}
+  }
+
+  &__location {
+    order: 1;
+    text-align: center;
+    margin-bottom: 21px;
+
+    @include viewport-md {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+		}
+
+    @include viewport-lg {
+      order:initial;
+      flex: 1 1 40%;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__location-adress {
+    font-size: 16px;
+    color: $main-color;
+    margin-bottom: 10px;
+    line-height: 1;
+
+    @include viewport-md {
+      margin-bottom: 0;
+		}
+  }
+
+  &__location-map {
+    color: $regular-color;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1;
+    text-transform: uppercase;
+		text-decoration: none;
+  }
+
+  &__copyright {
+    order: 3;
+    font-size: 16;
+    color: $text-color;
+    text-align: center;
+    line-height: 1;
+
+    @include viewport-md {
+
+		}
+
+    @include viewport-lg {
+			order:initial;
+      flex: 1 1 40%;
+      text-align: right;
+    }
+  }
+
+  &__contacts {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    @include viewport-md {
+      flex-direction: row;
+      justify-content: start;
+		}
+
+    @include viewport-lg {
+			order:initial;
+      flex: 1 1 40%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__contacts-social {
+    background: url(../images/facebook-footer.svg) no-repeat;
+    background-size: 38px;
+    width: 38px;
+    height: 38px;
+  }
+
+  &__contacts-phone {
+    color: $alt-color;
+    font-size: 16px;
+		font-weight: 700;
+		text-decoration: none;
+    line-height: 1;
+  }
+
+  &__contacts-email {
+    color: $regular-color;
+    font-size: 16px;
+		font-weight: 700;
+		text-decoration: none;
+    line-height: 1;
+  }
+}
